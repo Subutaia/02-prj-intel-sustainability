@@ -1,1 +1,150 @@
-/* Add your CSS here */
+/* Make the header section bigger and centered */
+.intel-header {
+    background: linear-gradient(135deg, #0071c5 0%, #3ac4fa 100%); /* Intel blue gradient */
+    color: #fff; /* White text */
+    text-align: center; /* Center all header content */
+    padding: 120px 10px 90px 10px; /* Bigger header with more space */
+}
+
+/* Style the Intel logo */
+.intel-logo {
+    width: 140px; /* Make the logo larger */
+    margin-bottom: 24px; /* Space below the logo */
+}
+
+/* Style the main headline */
+.headline {
+    font-size: 2.5em; /* Bigger headline text */
+    font-weight: bold;
+    margin: 0 0 18px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the subheading */
+.subheading {
+    font-size: 1.2em;
+    margin: 0 auto;
+    max-width: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+/* Body background */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eaf1fb;
+    margin: 0;
+    padding: 0;
+}
+
+/* Timeline section: horizontal scroll on large screens */
+section {
+    display: flex; /* Cards are in a row */
+    overflow-x: auto; /* Scroll if too wide */
+    gap: 24px; /* Space between cards */
+    padding: 36px 24px 12px 24px;
+    justify-content: center;
+    background: #fff;
+}
+
+/* Timeline card styling */
+.timeline-card {
+    background: #f5faff;
+    border-radius: 8px;
+    min-width: 220px;
+    max-width: 240px;
+    flex: 0 0 auto;
+    box-shadow: 0 2px 8px rgba(0,113,197,0.08);
+    padding: 16px 12px 18px 12px;
+    text-align: center;
+    border: 1px solid #b6d0ee;
+    transition: box-shadow 0.3s, border-color 0.3s;
+    position: relative;
+    cursor: pointer;
+    margin: 0; /* Remove default margin */
+}
+
+/* Year and event styling */
+.year {
+    color: #0071c5;
+    font-size: 1.2em;
+    margin: 0 0 4px 0;
+    font-weight: bold;
+}
+
+.event {
+    color: #222;
+    font-size: 1em;
+    margin: 0 0 10px 0;
+    font-weight: normal;
+}
+
+/* Card image styling */
+.timeline-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    border: 1px solid #e0eaf6;
+}
+
+/* Hide details by default */
+.details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    background: #eaf1fb;
+    margin-top: 8px;
+    padding: 0 8px;
+    font-size: 0.97em;
+    color: #0071c5;
+    border-radius: 4px;
+    transition: max-height 0.4s, opacity 0.4s, padding 0.4s;
+}
+
+/* Show details on hover */
+.timeline-card:hover .details,
+.timeline-card:focus .details {
+    max-height: 120px;
+    opacity: 1;
+    padding: 8px;
+}
+
+/* Example: show details by default if .show is added (for demo) */
+.details.show {
+    max-height: 120px;
+    opacity: 1;
+    padding: 8px;
+}
+
+/* Highlight card on hover */
+.timeline-card:hover,
+.timeline-card:focus {
+    box-shadow: 0 4px 16px rgba(0,113,197,0.18);
+    border-color: #0071c5;
+}
+
+/* Timeline instructions styling */
+.timeline-instructions {
+    background: linear-gradient(135deg, #0071c5 0%, #3ac4fa 100%); /* Intel blue gradient */
+    color: #fff; /* White text for contrast */
+    text-align: center; /* Center the text */
+    font-size: 1em;
+    margin: 0; /* Remove default margin */
+    padding: 24px 10px 24px 10px; /* Add space above and below */
+    border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+}
+
+/* Responsive: stack cards vertically on small screens */
+@media (max-width: 700px) {
+    section {
+        display: block; /* Cards stack vertically */
+        overflow-x: visible; /* No horizontal scroll */
+        padding: 18px 4px 8px 4px;
+    }
+    .timeline-card {
+        max-width: 98%; /* Cards take almost full width */
+        min-width: 0; /* Allow shrinking */
+        margin: 0 auto 18px auto; /* Center cards and add space below */
+    }
+}
