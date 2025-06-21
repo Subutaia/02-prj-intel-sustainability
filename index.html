@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <title>Intel Sustainability Journey</title>
     <!-- Link to the CSS file -->
     <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap RTL CSS for right-to-left support -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Header section with Intel logo, headline, and subheading -->
-    <header class="intel-header">
-        <!-- Actual Intel logo SVG for best quality and accessibility -->
+    <header class="intel-header text-center" dir="rtl">
+        <!-- Intel logo -->
         <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Intel-logo.svg" alt="Intel Logo" class="intel-logo">
-        <h1 class="headline">SUSTAINABILITY<br>THROUGH THE AGES</h1>
-        <p class="subheading">
+        <!-- Headline: RTL direction, centered -->
+        <h1 class="headline" dir="rtl" style="text-align: center;">
+            SUSTAINABILITY<br>THROUGH THE AGES
+        </h1>
+        <!-- Subheading: RTL direction, centered -->
+        <p class="subheading" dir="rtl" style="text-align: center;">
             Explore Intel's journey through time, discovering how our<br>
             commitment to innovation has shaped a more sustainable future<br>
             for technology and our planet.
@@ -63,5 +69,81 @@
     <p class="timeline-instructions">
         Scroll to view timeline | Hover over cards to learn more!
     </p>
+
+    <!-- Bootstrap 3-column section below the timeline -->
+    <section class="container my-5">
+      <!-- Start a new row for the columns -->
+      <div class="row">
+        <!-- First column -->
+        <div class="col-md-4 mb-4">
+          <h2>RISE Strategy</h2>
+          <p>
+            Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
+            Intel sets ambitious 2030 goals, including driving industry-wide 
+            progress on climate action, water stewardship, and waste reduction.
+          </p>
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+        <!-- Second column -->
+        <div class="col-md-4 mb-4">
+          <h2>Commitment</h2>
+          <p>
+            In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
+            (Scope 1 and 2) by 2040. This commitment builds on decades of 
+            environmental initiatives and partnerships across the semiconductor 
+            industry.
+          </p>
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+        <!-- Third column -->
+        <div class="col-md-4 mb-4">
+          <h2>Water &amp; Waste</h2>
+          <p>
+            Intel conserves billions of gallons of water annually and 
+            collaborates with local communities to restore watersheds.
+            Intel also upcycles and recycles materials to reduce waste and 
+            advance a circular economy.
+          </p>
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+  <!-- Subscription Form -->
+  <section class="container my-5" dir="rtl">
+    <!-- Section heading, centered and in English -->
+    <h2 class="text-center mb-4" dir="rtl">Sign Up for Our Sustainability Newsletter</h2>
+    <!-- Simple Bootstrap form for newsletter signup -->
+    <form class="mx-auto" style="max-width: 400px;">
+      <!-- Email input field -->
+      <div class="mb-3">
+        <label for="newsletterEmail" class="form-label" dir="rtl">Email address</label>
+        <input type="email" class="form-control" id="newsletterEmail" placeholder="Enter your email">
+      </div>
+      <!-- Name input field -->
+      <div class="mb-3">
+        <label for="newsletterName" class="form-label" dir="rtl">Full Name</label>
+        <input type="text" class="form-control" id="newsletterName" placeholder="Enter your name">
+      </div>
+      <!-- Checkbox for updates -->
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="newsletterUpdates">
+        <label class="form-check-label" for="newsletterUpdates" dir="rtl">I want to receive updates about Intel sustainability events</label>
+      </div>
+      <!-- Dropdown for topics of interest -->
+      <div class="mb-3">
+        <label for="newsletterTopic" class="form-label" dir="rtl">Topics of Interest</label>
+        <select class="form-select" id="newsletterTopic">
+          <option selected>Choose a topic...</option>
+          <option value="climate">Climate Action</option>
+          <option value="water">Water Conservation</option>
+          <option value="waste">Waste Reduction</option>
+          <option value="all">All Topics</option>
+        </select>
+      </div>
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+    </form>
+  </section>
 </body>
 </html>
